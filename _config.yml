@@ -1,0 +1,35 @@
+title: PatoDevOps
+description: A hub for DevOps resources, documentation, and projects
+baseurl: ""
+url: "https://pato-devops.github.io"
+
+# Theme
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+# Exclude from processing
+exclude:
+  - .github/
+  - .gitignore
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - node_modules/
+  - vendor/
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: "_docs"
+    values:
+      layout: doc
+      nav_order: 999

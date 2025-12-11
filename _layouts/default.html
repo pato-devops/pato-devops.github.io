@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: site.language | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+    {% feed_meta %}
+    {% if site.plugins contains 'jekyll-redirect-from' %}
+      {% include head-custom-redirect.html %}
+    {% endif %}
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <div class="header-nav">
+        <nav>
+          <a href="{{ '/' | relative_url }}">Home</a> |
+          <a href="{{ '/docs/' | relative_url }}">Documentation</a> |
+          <a href="https://github.com/{{ site.github.repository }}">GitHub</a>
+        </nav>
+      </div>
+
+      {{ content }}
+
+      <hr>
+      <footer>
+        <p>
+          <small>
+            &copy; 2024 {{ site.title }}. All rights reserved.
+          </small>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
