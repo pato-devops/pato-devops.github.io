@@ -1,0 +1,6 @@
+site_name: PatoDevOps Docs
+site_url: https://patodevops.pl
+site_author: PatoDevOps
+site_description: Dokumentacja PatoDevOps - Twoje centrum wiedzy DevOps
+theme:
+  name: material
